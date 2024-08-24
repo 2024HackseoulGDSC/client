@@ -1,6 +1,8 @@
+import Cart from "../cart/cart";
+import Logo from "../logo/logo";
 import SearchField from "../search-field/search-field"
 
-export default Header = () => {
+const Header = () => {
     return ( 
         <>
         <Logo></Logo>
@@ -9,3 +11,5 @@ export default Header = () => {
         </>
     )
 }
+
+export default Header;

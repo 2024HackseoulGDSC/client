@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
-export default SearchField = () => {
+const SearchField = () => {
 
 }
+
+export default SearchField;

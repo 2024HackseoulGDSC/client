@@ -1,10 +1,12 @@
 import React from 'react';
-import styles from './styles.module.css';
+import styles from './logo.module.css';
 
-export default Logo = () => {
+const Logo = () => {
     return(
         <div>
             <img className={ styles.logo }src='public/logo.svg'/>
         </div>
     )
 }
+
+export default Logo;
