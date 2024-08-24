@@ -1,12 +1,10 @@
 import ListComponent from "../list-component/list-component";
 import styles from "./list.module.css";
 
-const List = () => {
+const List = (list) => {
   return (
     <div className={styles.listContainer}>
-      <ListComponent></ListComponent>
-      <ListComponent></ListComponent>
-      <ListComponent></ListComponent>
+      {list.map((item,index)=><ListComponent key={index} item={item}></ListComponent> )}
     </div>
   );
 };

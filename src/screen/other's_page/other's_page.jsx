@@ -1,7 +1,9 @@
 import Banner from "../../component/banner/banner";
+import Card from "../../component/card/card";
 import Header from "../../component/header/header";
 import List from "../../component/list/list";
 import UserProfile from "../../component/userprofile/userprofile";
+import useFetch from "../../utils/useFetch";
 import styles from "./other's_page.module.css"
 
 import { useSearchParams } from 'react-router-dom';
@@ -11,28 +13,26 @@ const OthersPage = ({
 }) => {
 
   const [searchParams] = useSearchParams();
-  const userName = searchParams.get('query')
+  const reviewerName = searchParams.get('query')
 
-  const introduction="자기소개"
-  const profile='https://via.placeholder.com/150'
+  const {data, error, loading } = useFetch(whatsinmycart/cart/{reviewerName}) 
 
-  const cartList = [
-    {id:1, url: 'https://via.placeholder.com/150'},
-    {id:2, url: 'https://via.placeholder.com/150'},
-    {id:3, url: 'https://via.placeholder.com/150'},
-    {id:4, url: 'https://via.placeholder.com/150'},
-    {id:5, url: 'https://via.placeholder.com/150'}
-  ]
+  const introduction=data.introduction
+  const profile=data.profile
+  const reviewer = data.reviewer
+  const banner =data.banner
+  const posts = data.posts 
+  const carts = data.carts 
 
   return (
     <>
       <Header></Header>
-      <UserProfile isMe={false} introduction={introduction} profile={profile}></UserProfile>
+      <UserProfile isMe={false} introduction={introduction} profile={profile} reviewer={reviewer}></UserProfile>
       <div className={styles.bodyCotainer}>
-        <Banner className={styles.banner}></Banner>
-        <List className={styles.list}></List>
+        <Banner className={styles.banner} url={banner}></Banner>
+        <List className={styles.list} list={posts}></List>
         <div className={styles.cartItemList}>
-            {cartList.map(item => <img key={item.id} src={item.url}></img>)}
+            {carts.map(item => <Card key={item.id} image={item.image} productUrl={productUrl}></Card>)}
         </div>
       </div>
     </>

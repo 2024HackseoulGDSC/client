@@ -5,6 +5,7 @@ const UserProfile = ({
     isMe,
     introduction,
     profile,
+    reviewer
 }) => {
   const [isClicked, setIsClicked] = useState(false);
   const [text, setText] = useState("");
@@ -30,7 +31,10 @@ const UserProfile = ({
       <div className={styles.avatarContainer}>
         <img src={profile}></img>
       </div>
-      <div className={styles.info}>{introduction}</div>
+      <div className={styles.info}>
+        <div className={styles.reviewer}>{reviewer}</div>
+        <div className={styles.introduction}>{introduction}</div>
+      </div>
       <button className={styles.button} onClick={handleClick}>{text}</button>
     </div>
   );

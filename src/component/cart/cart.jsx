@@ -1,6 +1,5 @@
 import styles from './cart.module.css';
 import { useNavigate } from 'react-router-dom';
-import styles from "./cart.module.css";
 
 const Cart = () => {
     const navigate = useNavigate();

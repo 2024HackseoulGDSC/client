@@ -20,4 +20,6 @@
 .recommendItem {
   grid-row: 8 / 10;
   grid-column: 1/5;
+  display: flex;
+  justify-content: space-around;
 }

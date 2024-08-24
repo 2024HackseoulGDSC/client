@@ -1,0 +1,60 @@
+.bodyContainer{
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+}
+
+.recentBuy{
+    grid-rows: 2/3;
+    grid-column: 1/2;
+}
+
+.recentBuyTitle{
+    
+}
+
+.moreButton{
+
+}
+
+.recentCart{
+    grid-rows: 1/2;
+    grid-column: 1/2;
+}
+
+.recentCartTitle{
+
+}
+
+.hideButtonContainer{
+
+}
+
+.myPosts{
+    grid-rows: 3/4;
+    grid-column: 1/2;
+}
+
+.followsContainer{
+    grid-rows: 1/4;
+    grid-column: 2/3;
+}
+
+.followContainer{
+
+}
+
+.avatar{
+
+}
+
+.profile{
+
+}
+
+.followCartContainer{
+
+}
+
+
+
