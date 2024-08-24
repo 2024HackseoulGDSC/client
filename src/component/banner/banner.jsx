@@ -1,12 +1,8 @@
 import React from "react";
-import styles from './banner.module.css';
+import styles from "./banner.module.css";
 
 const Banner = () => {
-    return(
-        <div className={styles.bannerContainer}>
-
-        </div>
-    )
-}
+  return <div className={styles.bannerContainer}></div>;
+};
 
 export default Banner;

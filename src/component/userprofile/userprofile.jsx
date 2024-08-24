@@ -1,31 +1,39 @@
-import React, { useEffect, useState } from 'react'
-import styles from './UserProfile.module.css'
+import React, { useEffect, useState } from "react";
+import styles from "./userprofile.module.css";
 
-const UserProfile = (isMe) => {
-    const [isClicked, Click] = useState(false);
-    const [text, setText] = useState('')
-    
-    useEffect(()=>{
-        if (isMe){
-            setText("수정")
-        } else {
-            if (isClicked){
-                setText("언팔로우")
-            } else {
-                setText("팔로우")
-            }
-        }
-    }, [isMe,isClicked])
+const UserProfile = ({
+    isMe,
+    introduction,
+    profile,
+}) => {
+  const [isClicked, setIsClicked] = useState(false);
+  const [text, setText] = useState("");
 
-    return(
-        <div className={styles.profile}>
-            <div className={styles.avatarContainer}>
-                <img src=''></img>
-            </div>
-            <div className={styles.info}>자기소개</div>
-            <div className={styles.button}>{text}</div>
-        </div>
-    )
-}
+  const handleClick = () => {
+    setIsClicked(prevState=>!prevState)
+  }
+
+  useEffect(() => {
+    if (isMe) {
+      setText("수정");
+    } else {
+      if (isClicked) {
+        setText("언팔로우");
+      } else {
+        setText("팔로우");
+      }
+    }
+  }, [isMe, isClicked]);
+
+  return (
+    <div className={styles.profile}>
+      <div className={styles.avatarContainer}>
+        <img src={profile}></img>
+      </div>
+      <div className={styles.info}>{introduction}</div>
+      <button className={styles.button} onClick={handleClick}>{text}</button>
+    </div>
+  );
+};
 
 export default UserProfile;

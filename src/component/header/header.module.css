@@ -1,24 +1,23 @@
-.headerContainer{
-    height: 100px;
-    width: 100%;
-    position: relative;
-    display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
-    row-gap: 10px;
+.headerContainer {
+  height: 100px;
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  row-gap: 10px;
 }
 
-
-.logo{
-    grid-column-start:1;
-    grid-column-end: 2;
+.logo {
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
-.search{
-    grid-column-start:2;
-    grid-column-end: 3;
+.search {
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
-.cart{
-    grid-column-start: 3;
-    grid-column-end: 4;
+.cart {
+  grid-column-start: 3;
+  grid-column-end: 4;
 }

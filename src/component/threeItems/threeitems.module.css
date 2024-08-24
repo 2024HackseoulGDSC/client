@@ -1,0 +1,9 @@
+.threeContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.item{
+    width: 30%;
+    height: 100%;
+}
