@@ -1,8 +1,11 @@
 import styles from './cart.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
+    const navigate = useNavigate();
     const handleClick = () => {
-        console.log("클릭됨")
+        console.log("클릭됨");
+        navigate('/mypage');
     }
 
     return (
