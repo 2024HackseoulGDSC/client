@@ -1,9 +1,13 @@
+import styles from './cart.module.css';
+import { useNavigate } from 'react-router-dom';
 import styles from "./cart.module.css";
 
 const Cart = () => {
-  const handleClick = () => {
-    console.log("클릭됨");
-  };
+    const navigate = useNavigate();
+    const handleClick = () => {
+        console.log("클릭됨");
+        navigate('/mypage');
+    }
 
   return (
     <div>
