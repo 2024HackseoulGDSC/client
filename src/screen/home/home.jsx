@@ -10,7 +10,7 @@ const Home = () => {
         <div className={styles.bodyContainer }> 
             <List className={ styles.reviewList }></List>
             <Banner className={ styles.banner}></Banner>
-            <Card clasName={styles.recommendItem}></Card>
+            <Card className={styles.recommendItem}></Card>
         </div>
         
     </div>

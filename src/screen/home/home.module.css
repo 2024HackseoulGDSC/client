@@ -1,15 +1,23 @@
 .bodyContainer{
-
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-gap: 10px;
 }
 
 .reviewList{
-
+    grid-row: 1 / 10;
+    grid-column: 5 / 8;
 }
 
 .banner{
-
+    grid-row-start: 1;
+    grid-row-end: 8;
+    grid-column-start: 1;
+    grid-column-end: 5;
 }
 
 .recommendItem{
-    
+    grid-row: 8 / 10;
+    grid-column: 1/5;
 }

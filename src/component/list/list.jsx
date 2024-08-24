@@ -5,6 +5,8 @@ const List=()=>{
     return(
         <div className={styles.listContainer}>
             <ListComponent></ListComponent>
+            <ListComponent></ListComponent>
+            <ListComponent></ListComponent>
         </div>
     )
 }
